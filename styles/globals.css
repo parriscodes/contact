@@ -1,3 +1,431 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Navbar */
+  .nav-popover-container {
+    @apply sticky top-0 z-40 bg-white;
+  }
+
+  .nav-main-container {
+    @apply px-4 mx-auto max-w-7xl sm:px-6;
+  }
+  
+  .nav-desktop-container {
+    @apply flex items-center justify-between py-6 border-b-2 border-gray-100 md:justify-start md:space-x-10;
+  }
+  
+  .nav-desktop-container-1 {
+    @apply flex justify-start lg:w-0 lg:flex-1;
+  }
+
+  .nav-mobile-container {
+    @apply px-5 py-6 space-y-6;
+  }
+  
+  .nav-mobile-container-1 {
+    @apply grid grid-cols-1 gap-y-4 gap-x-8;
+  }
+  
+  .nav-popover-btn {
+    @apply inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#027d46];
+  }
+
+  .nav-popover-panel {
+    @apply absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden;
+  }
+
+  .nav-popover-panel-container {
+    @apply bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50;
+  }
+
+  .nav-logo-primary {
+    @apply text-2xl font-bold text-[#027d46];
+  }
+
+  .nav-logo-secondary {
+    @apply text-xl font-bold text-[#027d46];
+  }
+  
+  .navlink {
+    @apply text-base font-medium text-gray-500 hover:text-green-800 hover:underline decoration-2;
+  }
+
+  .nav-spacing {
+    @apply items-center justify-end hidden md:flex md:flex-1 lg:w-0;
+  }
+
+  /* Home Page */
+  /* Hero */
+  .hero-container1 {
+    @apply h-[40rem] w-full relative bg-slate-500;
+  }
+
+  .hero-img {
+    @apply absolute object-cover w-full h-[40rem] bg-center mix-blend-overlay;
+  }
+  
+  .hero-container2 {
+    @apply pt-10 mx-auto max-w-7xl lg:px-8 sm:pt-16 lg:overflow-hidden lg:pt-8 lg:pb-14;
+  }
+
+  .hero-container3 {
+    @apply lg:grid lg:grid-cols-2 lg:gap-8;
+  }
+  
+  .hero-left-container {
+    @apply max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center;
+  }
+
+  .hero-link {
+    @apply relative inline-flex items-center p-1 pr-2 rounded-full bg-gray-50 text-[#027d46] sm:text-base lg:text-sm xl:text-base hover:text-[#027d46];
+  }
+  
+  .hero-span1 {
+    @apply px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-[#027d46] rounded-full;
+  }
+
+  .hero-span2 {
+    @apply ml-4 text-sm hover:cursor-pointer;
+  }
+
+  .hero-heading {
+    @apply relative mt-4 text-4xl font-extrabold tracking-tight text-gray-100 sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl;
+  }
+
+  .hero-subheading {
+    @apply relative mt-3 text-base text-white sm:mt-5 sm:text-xl lg:text-lg xl:text-xl;
+  }
+
+  .hero-image-motion {
+    @apply mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative;
+  }
+
+  .hero-image-container {
+    @apply max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0;
+  }
+
+  .hero-image {
+    @apply w-full rounded-lg lg:absolute lg:h-full lg:w-auto lg:max-w-none;
+  }
+
+  .features-container1 {
+    @apply relative py-16 bg-white sm:py-24 lg:py-32;
+  }
+  
+  .features-container2 {
+    @apply max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8;
+  }
+  .features-container3 {
+    @apply absolute inset-x-0 top-0 items-center justify-center hidden overflow-hidden md:flex md:inset-y-0;
+  }
+
+  .features-pattern {
+    @apply w-full max-w-screen-xl text-sky-100;
+  }
+
+  .features-subheading {
+    @apply relative text-base font-semibold tracking-wider uppercase text-[#027d46];
+  }
+  
+  .features-heading {
+    @apply relative mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl;
+  }
+
+  .features-text {
+    @apply relative mx-auto mt-5 text-xl text-gray-500 max-w-prose;
+  }
+
+  .features-container4 {
+    @apply relative grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3;
+  }
+
+  .features-container5 {
+    @apply flow-root px-6 pb-8 rounded-lg bg-gray-50;
+  }
+
+  .features-span1 {
+    @apply inline-flex items-center justify-center p-3 rounded-md shadow-lg bg-gradient-to-r from-emerald-500 to-teal-600;
+  }
+
+  .features-name {
+    @apply mt-8 text-lg font-medium tracking-tight text-gray-900 cursor-text;
+  }
+
+  .features-description {
+    @apply mt-5 text-base text-gray-500 cursor-text;
+  }
+
+  /* Blog Preview */
+  .preview-container1 {
+    @apply relative py-16 bg-white sm:py-24 lg:pt-24 lg:pb-32;
+  }
+
+  .preview-container2 {
+    @apply max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl;
+  }
+
+  .preview-subheading {
+    @apply text-base font-semibold tracking-wider uppercase text-[#027d46];
+  }
+
+  .preview-heading {
+    @apply mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl;
+  }
+
+  .preview-text {
+    @apply mx-auto mt-5 text-xl text-gray-500 max-w-prose;
+  }
+
+  .preview-container3 {
+    @apply relative py-16 bg-white sm:py-24 lg:pt-24 lg:pb-32;
+  }
+
+  .preview-container4 {
+    @apply grid max-w-md gap-8 px-4 mx-auto mt-12 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl;
+  }
+
+  .preview-scale {
+    @apply flex flex-col overflow-hidden transition duration-150 rounded-lg shadow-lg hover:cursor-pointer hover:scale-105;
+  }
+
+  .preview-cover {
+    @apply object-cover w-full h-48;
+  }
+
+  .preview-post-container {
+    @apply flex flex-col justify-between flex-1 p-6 bg-white;
+  }
+
+  .preview-category {
+    @apply text-sm font-medium text-[#027d46];
+  }
+
+  .preview-title {
+    @apply text-xl font-semibold text-gray-900;
+  }
+
+  .preview-description {
+    @apply mt-3 text-base text-gray-500;
+  }
+
+  .preview-author-image {
+    @apply w-12 h-12 rounded-full;
+  }
+
+  .preview-author-name {
+    @apply text-sm font-medium text-gray-900;
+  }
+
+  .preview-length {
+    @apply flex space-x-1 text-sm text-gray-500;
+  }
+
+  /* About Page */
+  /* Trusted Partners */
+  .image-span1 {
+    @apply flex justify-center col-span-1 md:col-span-2 lg:col-span-1;
+  }
+  
+  .image-span2 {
+    @apply flex justify-center col-span-1 md:col-span-3 lg:col-span-1;
+  }
+
+  .image-span3 {
+    @apply flex justify-center col-span-2 md:col-span-3 lg:col-span-1;
+  }
+
+  /* Statistics */
+  .stat {
+    @apply order-1 text-5xl font-extrabold text-[#027d46];
+  }
+
+  .stat-title {
+    @apply order-2 mt-2 text-lg font-medium leading-6 text-gray-500;
+  }
+
+  /* Team Cards */
+  .about-container {
+    @apply px-4 py-16 mx-auto max-w-7xl sm:py-24 sm:px-6 lg:px-8;
+  }
+
+  .about-heading {
+    @apply text-base font-semibold tracking-wide uppercase text-[#027d46];
+  }
+
+  .about-subheading {
+    @apply mt-1 text-3xl font-extrabold text-gray-900 sm:text-4xl sm:tracking-tight lg:text-5xl;
+  }
+  
+  .about-text {
+    @apply max-w-xl pb-16 mx-auto mt-5 text-xl text-gray-500;
+  }
+  
+  .card-container {
+    @apply space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-2 lg:gap-x-8;
+  }
+
+  .card-image-container {
+    @apply aspect-w-3 aspect-h-2;
+  }
+  
+  .card-image {
+    @apply object-cover rounded-t-lg shadow-lg;
+  }
+
+  .card-text-container {
+    @apply bg-gray-100 rounded-b-lg;
+  }
+
+  .card-text {
+    @apply py-4 space-y-2 text-lg font-medium leading-6;
+  }
+
+  /* Blog */
+  .blog-main {
+    @apply py-16 overflow-x-hidden bg-zinc-50 bg-gradient-to-br from-zinc-100 to-cyan-50 lg:py-24 md:py-20;
+  }
+
+  .blog-motion-container {
+    @apply flex flex-col items-center px-4 mx-auto text-center max-w-7xl 2xl:px-0 gap-y-9 md:gap-y-10 lg:gap-y-12;
+  }
+
+  .blog-container {
+    @apply flex flex-col items-center text-center gap-y-4 md:gap-y-5 lg:gap-y-6;
+  }
+
+  .blog-introduction {
+    @apply font-semibold sm:text-lg md:text-xl text-cyan-700;
+  }
+
+  .blog-heading {
+    @apply text-4xl font-bold md:text-6xl lg:text-8xl text-cyan-900;
+  }
+
+  .blog-subheading {
+    @apply inline-block text-4xl font-bold text-transparent md:text-6xl lg:text-8xl bg-clip-text bg-gradient-to-r from-[#027d46] to-cyan-600;
+  }
+
+  .blog-text {
+    @apply font-medium leading-normal md:text-lg lg:text-xl text-zinc-500 md:w-4/5;
+  }
+
+  /* Carriers Agreement */
+  .carrier-container1 {
+    @apply px-4 py-12 overflow-hidden bg-white xl:py-24 sm:px-6 lg:px-8;
+  }
+  
+  .carrier-container2 {
+    @apply mx-auto max-w-max lg:max-w-7xl;
+  }
+
+  .carrier-container3 {
+    @apply relative z-10 mb-8 md:mb-2 md:px-6;
+  }
+
+  .carrier-container4 {
+    @apply text-base lg:max-w-none;
+  }
+
+  .carrier-heading {
+    @apply font-semibold leading-6 tracking-wide uppercase text-[#027d46];
+  }
+
+  .carrier-subheading {
+    @apply mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl;
+  }
+  
+  .carrier-container5 {
+    @apply relative md:bg-white md:p-6;
+  }
+  
+  .carrier-container6 {
+    @apply text-gray-500 lg:max-w-none;
+  }
+
+  .carrier-pattern1 {
+    @apply absolute top-0 right-0 hidden -mt-20 -mr-20 md:block;
+  }
+
+  .carrier-pattern2 {
+    @apply absolute bottom-0 left-0 hidden -mb-20 -ml-20 md:block;
+  }
+
+  .carrier-list {
+    @apply pl-2 list-decimal;
+  }
+  
+  /* Footer */
+  .footer-container-1 {
+    @apply px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8;
+  }
+
+  .footer-container-2 {
+    @apply xl:grid xl:grid-cols-3 xl:gap-8;
+  }
+
+  .footer-container-3 {
+    @apply space-y-8 xl:col-span-1;
+  }
+  
+  .footer-logo {
+    @apply text-xl font-bold text-[#027d46];
+  }
+  
+  .footer-description {
+    @apply text-base text-gray-500;
+  }
+  
+  .social-link {
+    @apply text-gray-400 w-7 h-7;
+  }
+
+  .resource-container-1 {
+    @apply grid grid-cols-2 gap-8 mt-12 xl:col-span-2 xl:mt-0;
+  }
+
+  .resource-container-2 {
+    @apply md:grid md:grid-cols-2 md:gap-8;
+  }
+  
+  .footer-title {
+    @apply text-base font-medium text-gray-400;
+  }
+
+  .footer-list {
+    @apply mt-4 space-y-4;
+  }
+  
+  .footer-link {
+    @apply text-base text-gray-500 hover:text-[#027d46];
+  }
+
+  .footer-column-container {
+    @apply grid grid-cols-2 gap-8 mt-12 xl:col-span-2 xl:mt-0;
+  }
+
+  .footer-resources-container {
+    @apply md:grid md:grid-cols-2 md:gap-8;
+  }
+
+  .footer-support-container {
+    @apply mt-12 md:mt-0;
+  }
+
+  .footer-company-container {
+    @apply md:grid md:grid-cols-2 md:gap-8;
+  }
+
+  .copyright-container {
+    @apply pt-8 mt-12 border-t border-gray-600;
+  }
+  
+  .copyright {
+    @apply text-base text-gray-400 xl:text-center;
+  }
+
+  .copyright-span {
+    @apply text-[#027d46];
+  }
+}
