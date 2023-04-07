@@ -279,7 +279,7 @@ const Contact: NextPage = () => {
                     id="name"
                     name="name"
                     placeholder="Adam"
-                    label="First name *"
+                    label="Name *"
                   />
                   
                   <Input
