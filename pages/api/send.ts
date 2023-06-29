@@ -15,7 +15,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
       message,
     }: { name: string; email: string; message: string } = req.body;
     const msg = {
-      to: "fortunep007@gmail.com",
+      to: "cbennett@landseaair-nc.com",
       from: "parriscodes@gmail.com",
       subject: `${name.toUpperCase()} sent you a message`,
       text: `Email => ${email}`,
